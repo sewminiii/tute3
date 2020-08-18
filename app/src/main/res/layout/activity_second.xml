@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number 1"
+        android:textColor="#060606"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number 2"
+        android:textColor="#0A0A0A"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="117dp"
+        android:layout_height="47dp"
+        android:text="@string/plus"
+        android:textColor="#0A0A0A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnsubstract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnsubstract"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="add"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/sum"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnsubstract"
+        android:layout_width="117dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/btnsub"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="0.009"
+        android:onClick="substraction"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btndivide"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/btndivide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnmultiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnadd"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="divide"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btnmultiply"
+        android:layout_width="117dp"
+        android:layout_height="47dp"
+        android:text="@string/btnmulti"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btndivide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btndivide"
+        android:onClick="multiply"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

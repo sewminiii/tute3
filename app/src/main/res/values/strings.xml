@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="sum">Sum</string>
+    <string name="plus">+</string>
+    <string name="btnsub">-</string>
+    <string name="btnmulti">x</string>
+    <string name="btndivide">/</string>
+</resources>
